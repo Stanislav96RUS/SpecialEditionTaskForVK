@@ -22,7 +22,7 @@ final class CurrentWeatherViewController: UIViewController {
     private var modelView = WeatherModelView()
     private let disposeBag = DisposeBag()
     
-    /*private*/ let labelNameCity: UILabel = {
+    let labelNameCity: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: ConstantsCurrentWeather.fontSize.fontSize32)
         label.textColor = .white
@@ -52,10 +52,10 @@ final class CurrentWeatherViewController: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .systemBlue
+        tableView.backgroundColor = .clear
         return tableView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
@@ -68,13 +68,13 @@ final class CurrentWeatherViewController: UIViewController {
         modelView.requestWeatherForLOcation()
         bind()
     }
- 
+    
     private func setupSubviews() {
         view.addSubview(labelNameCity)
         view.addSubview(labelTemp)
         view.addSubview(labelDescription)
         view.addSubview(labelTempMinAndMax)
-            }
+    }
     
     private func setupConstraints() {
         labelNameCity.snp.makeConstraints { make in
@@ -98,7 +98,7 @@ final class CurrentWeatherViewController: UIViewController {
     private func configureUI() {
         view.backgroundColor = .systemBlue
     }
-
+    
     var forecastArray: [(temp: Int, date: String, weekDay: String)] = []
     func bind() {
         modelView.relay.subscribe { event in
@@ -116,7 +116,7 @@ final class CurrentWeatherViewController: UIViewController {
         }.disposed(by: disposeBag)
         
         modelView.relayForecast.subscribe { event in
-                self.forecastArray = event.element ?? []
+            self.forecastArray = event.element ?? []
             self.forecastTableAppear()
         }.disposed(by: disposeBag)
     }
@@ -133,7 +133,7 @@ final class CurrentWeatherViewController: UIViewController {
             }
         }
     }
- 
+    
 }
 
 extension CurrentWeatherViewController: UITableViewDataSource, UITableViewDelegate {
@@ -158,7 +158,7 @@ extension CurrentWeatherViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ForecastCell.identifier, for: indexPath) as! ForecastCell
-        cell.backgroundColor = .systemBlue
+        cell.backgroundColor = .clear
         let forecast = self.forecastArray[indexPath.row]
         let weekDay = forecast.weekDay
         cell.labelDayWeek.text = weekDay

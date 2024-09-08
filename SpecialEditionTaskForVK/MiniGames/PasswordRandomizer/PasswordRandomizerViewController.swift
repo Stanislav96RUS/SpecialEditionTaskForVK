@@ -1,5 +1,5 @@
 //
-//  Game2ViewController.swift
+//  PasswordRandomizerViewController.swift
 //  SpecialEditionTaskForVK
 //
 //  Created by Stanislav on 03.09.2024.
@@ -8,8 +8,8 @@
 import UIKit
 import SnapKit
 
-final class PasswordRandomizer: UIViewController {
-
+final class PasswordRandomizerViewController: UIViewController {
+    
     let pasteboard = UIPasteboard.general
     
     let titlelableText: UILabel = {
@@ -44,7 +44,7 @@ final class PasswordRandomizer: UIViewController {
         return lable
     }()
     let buttonGeneration: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: 200, height: 48)
         button.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 8 * 2.5)
         button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
@@ -65,7 +65,7 @@ final class PasswordRandomizer: UIViewController {
         return lable
     }()
     let buttonCopy: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: 200, height: 48)
         button.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 8 * 3.5)
         button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
@@ -91,7 +91,7 @@ final class PasswordRandomizer: UIViewController {
         view.addSubview(buttonGeneration)
         view.addSubview(lableText)
         view.addSubview(buttonCopy)
-        lableText1.text = "generate a \(Int(sliderCount.value))-digit password"
+        lableText1.text = "Generate a \(Int(sliderCount.value))-digit password."
     }
     
     @objc func paybackSliderValueDidChange(sender: UISlider!) {
@@ -118,7 +118,7 @@ final class PasswordRandomizer: UIViewController {
         buttonCopy.setTitle("COPIED", for: .normal)
         buttonCopy.setTitleColor(.systemGreen, for: .normal)
     }
-                         
+    
     func countToPassword (_ count: String) -> String {
         guard let count = Int(count) else { return "" }
         let symbols = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0987654321"

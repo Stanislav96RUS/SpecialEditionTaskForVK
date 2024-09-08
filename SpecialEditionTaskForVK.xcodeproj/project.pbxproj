@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		7DB2CDFCE124C49EB0DD43DF /* Pods_SpecialEditionTaskForVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842D5F0B6A2607D9C8D4349A /* Pods_SpecialEditionTaskForVK.framework */; };
 		850FC60A2C883FBF0033FF9E /* OneEighthOfTheScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FC6092C883FBF0033FF9E /* OneEighthOfTheScreen.swift */; };
-		850FC6102C8850650033FF9E /* Game1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FC60F2C8850650033FF9E /* Game1ViewCell.swift */; };
 		851FE9BC2C8766BD000F3A29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851FE9BB2C8766BD000F3A29 /* AppDelegate.swift */; };
 		851FE9BE2C8766BD000F3A29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851FE9BD2C8766BD000F3A29 /* SceneDelegate.swift */; };
 		851FE9C02C8766BD000F3A29 /* OneHalfOfTheScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851FE9BF2C8766BD000F3A29 /* OneHalfOfTheScreen.swift */; };
 		851FE9C52C8766BF000F3A29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851FE9C42C8766BF000F3A29 /* Assets.xcassets */; };
 		851FE9C82C8766BF000F3A29 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 851FE9C72C8766BF000F3A29 /* Base */; };
-		857858A62C8775C200FB1DD2 /* Game1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857858A52C8775C200FB1DD2 /* Game1ViewController.swift */; };
-		857858A82C8775D100FB1DD2 /* PasswordRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857858A72C8775D100FB1DD2 /* PasswordRandomizer.swift */; };
-		857858AA2C8775DD00FB1DD2 /* Game3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857858A92C8775DD00FB1DD2 /* Game3ViewController.swift */; };
+		857858A82C8775D100FB1DD2 /* PasswordRandomizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857858A72C8775D100FB1DD2 /* PasswordRandomizerViewController.swift */; };
+		857858AA2C8775DD00FB1DD2 /* Magic8BallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857858A92C8775DD00FB1DD2 /* Magic8BallViewController.swift */; };
+		85942E692C8DAEDC005A0ADE /* Magic8BallViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85942E682C8DAEDC005A0ADE /* Magic8BallViewControllerCell.swift */; };
+		85942E6B2C8DB51A005A0ADE /* PasswordRandomizerViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85942E6A2C8DB51A005A0ADE /* PasswordRandomizerViewControllerCell.swift */; };
 		859EC5E82C8862F800EF9116 /* WeatherModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EC5DA2C8862F800EF9116 /* WeatherModelView.swift */; };
 		859EC5EB2C8862F800EF9116 /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EC5E02C8862F800EF9116 /* CurrentWeatherViewController.swift */; };
 		859EC5EC2C8862F800EF9116 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EC5E22C8862F800EF9116 /* LocationService.swift */; };
@@ -27,13 +27,12 @@
 		859EC5F42C88846C00EF9116 /* CurrentWeatherViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859EC5F32C88846C00EF9116 /* CurrentWeatherViewControllerCell.swift */; };
 		85C49F612C87A653000A4C0C /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C49F602C87A653000A4C0C /* MainTabBar.swift */; };
 		85C49F632C87A9DB000A4C0C /* FullScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C49F622C87A9DB000A4C0C /* FullScreen.swift */; };
-		85D7A9D22C8B44250006C5A3 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7A9D12C8B44250006C5A3 /* ForecastCell.swift */; };
+		85EE8B092C8DC46400DA480B /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EE8B082C8DC46400DA480B /* ForecastCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		842D5F0B6A2607D9C8D4349A /* Pods_SpecialEditionTaskForVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpecialEditionTaskForVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		850FC6092C883FBF0033FF9E /* OneEighthOfTheScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneEighthOfTheScreen.swift; sourceTree = "<group>"; };
-		850FC60F2C8850650033FF9E /* Game1ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1ViewCell.swift; sourceTree = "<group>"; };
 		851FE9B82C8766BD000F3A29 /* SpecialEditionTaskForVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecialEditionTaskForVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		851FE9BB2C8766BD000F3A29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		851FE9BD2C8766BD000F3A29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,9 +41,10 @@
 		851FE9C72C8766BF000F3A29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		851FE9C92C8766BF000F3A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8575206FE698F16F4E492BF3 /* Pods-SpecialEditionTaskForVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpecialEditionTaskForVK.release.xcconfig"; path = "Target Support Files/Pods-SpecialEditionTaskForVK/Pods-SpecialEditionTaskForVK.release.xcconfig"; sourceTree = "<group>"; };
-		857858A52C8775C200FB1DD2 /* Game1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1ViewController.swift; sourceTree = "<group>"; };
-		857858A72C8775D100FB1DD2 /* PasswordRandomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRandomizer.swift; sourceTree = "<group>"; };
-		857858A92C8775DD00FB1DD2 /* Game3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3ViewController.swift; sourceTree = "<group>"; };
+		857858A72C8775D100FB1DD2 /* PasswordRandomizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRandomizerViewController.swift; sourceTree = "<group>"; };
+		857858A92C8775DD00FB1DD2 /* Magic8BallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic8BallViewController.swift; sourceTree = "<group>"; };
+		85942E682C8DAEDC005A0ADE /* Magic8BallViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic8BallViewControllerCell.swift; sourceTree = "<group>"; };
+		85942E6A2C8DB51A005A0ADE /* PasswordRandomizerViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRandomizerViewControllerCell.swift; sourceTree = "<group>"; };
 		859EC5DA2C8862F800EF9116 /* WeatherModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModelView.swift; sourceTree = "<group>"; };
 		859EC5E02C8862F800EF9116 /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		859EC5E22C8862F800EF9116 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		859EC5F32C88846C00EF9116 /* CurrentWeatherViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewControllerCell.swift; sourceTree = "<group>"; };
 		85C49F602C87A653000A4C0C /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		85C49F622C87A9DB000A4C0C /* FullScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreen.swift; sourceTree = "<group>"; };
-		85D7A9D12C8B44250006C5A3 /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
+		85EE8B082C8DC46400DA480B /* ForecastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		962D77789C71FD5C8D991E4F /* Pods-SpecialEditionTaskForVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpecialEditionTaskForVK.debug.xcconfig"; path = "Target Support Files/Pods-SpecialEditionTaskForVK/Pods-SpecialEditionTaskForVK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,11 +90,9 @@
 		850FC60B2C883FDB0033FF9E /* MiniGames */ = {
 			isa = PBXGroup;
 			children = (
+				85AB93742C8CC6A9001C5847 /* Madic8Ball */,
 				859EC5F52C89AEC600EF9116 /* PasswordRandomizer */,
 				859EC5D92C8862DD00EF9116 /* CurrentWeather */,
-				857858A52C8775C200FB1DD2 /* Game1ViewController.swift */,
-				850FC60F2C8850650033FF9E /* Game1ViewCell.swift */,
-				857858A92C8775DD00FB1DD2 /* Game3ViewController.swift */,
 			);
 			path = MiniGames;
 			sourceTree = "<group>";
@@ -165,7 +163,7 @@
 		859EC5DF2C8862F800EF9116 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				85D7A9D12C8B44250006C5A3 /* ForecastCell.swift */,
+				85EE8B082C8DC46400DA480B /* ForecastCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,9 +206,19 @@
 		859EC5F52C89AEC600EF9116 /* PasswordRandomizer */ = {
 			isa = PBXGroup;
 			children = (
-				857858A72C8775D100FB1DD2 /* PasswordRandomizer.swift */,
+				857858A72C8775D100FB1DD2 /* PasswordRandomizerViewController.swift */,
+				85942E6A2C8DB51A005A0ADE /* PasswordRandomizerViewControllerCell.swift */,
 			);
 			path = PasswordRandomizer;
+			sourceTree = "<group>";
+		};
+		85AB93742C8CC6A9001C5847 /* Madic8Ball */ = {
+			isa = PBXGroup;
+			children = (
+				857858A92C8775DD00FB1DD2 /* Magic8BallViewController.swift */,
+				85942E682C8DAEDC005A0ADE /* Magic8BallViewControllerCell.swift */,
+			);
+			path = Madic8Ball;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,20 +337,20 @@
 			files = (
 				859EC5E82C8862F800EF9116 /* WeatherModelView.swift in Sources */,
 				850FC60A2C883FBF0033FF9E /* OneEighthOfTheScreen.swift in Sources */,
+				85942E6B2C8DB51A005A0ADE /* PasswordRandomizerViewControllerCell.swift in Sources */,
 				859EC5EB2C8862F800EF9116 /* CurrentWeatherViewController.swift in Sources */,
+				85EE8B092C8DC46400DA480B /* ForecastCell.swift in Sources */,
 				851FE9C02C8766BD000F3A29 /* OneHalfOfTheScreen.swift in Sources */,
-				85D7A9D22C8B44250006C5A3 /* ForecastCell.swift in Sources */,
 				85C49F632C87A9DB000A4C0C /* FullScreen.swift in Sources */,
 				851FE9BC2C8766BD000F3A29 /* AppDelegate.swift in Sources */,
 				859EC5EC2C8862F800EF9116 /* LocationService.swift in Sources */,
-				857858A62C8775C200FB1DD2 /* Game1ViewController.swift in Sources */,
+				85942E692C8DAEDC005A0ADE /* Magic8BallViewControllerCell.swift in Sources */,
 				85C49F612C87A653000A4C0C /* MainTabBar.swift in Sources */,
 				859EC5ED2C8862F800EF9116 /* NetworkService.swift in Sources */,
 				851FE9BE2C8766BD000F3A29 /* SceneDelegate.swift in Sources */,
-				857858A82C8775D100FB1DD2 /* PasswordRandomizer.swift in Sources */,
-				857858AA2C8775DD00FB1DD2 /* Game3ViewController.swift in Sources */,
+				857858A82C8775D100FB1DD2 /* PasswordRandomizerViewController.swift in Sources */,
+				857858AA2C8775DD00FB1DD2 /* Magic8BallViewController.swift in Sources */,
 				859EC5EE2C8862F800EF9116 /* WeatherModel.swift in Sources */,
-				850FC6102C8850650033FF9E /* Game1ViewCell.swift in Sources */,
 				859EC5F42C88846C00EF9116 /* CurrentWeatherViewControllerCell.swift in Sources */,
 				859EC5F22C88633200EF9116 /* ConstantsCurrentWeather.swift in Sources */,
 			);

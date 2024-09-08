@@ -8,7 +8,7 @@
 import UIKit
 
 class MainTabBar: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTapBar()
@@ -30,9 +30,6 @@ class MainTabBar: UITabBarController {
         let navigationv = UINavigationController(rootViewController: viewController)
         navigationv.tabBarItem.title = title
         navigationv.tabBarItem.image = image
-//        nav.viewControllers.first?.navigationItem.title = title + "Contr"
-//        nav.viewControllers.first?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Button", style: .plain, target: nil, action: nil)
-        
         return navigationv
     }
 }

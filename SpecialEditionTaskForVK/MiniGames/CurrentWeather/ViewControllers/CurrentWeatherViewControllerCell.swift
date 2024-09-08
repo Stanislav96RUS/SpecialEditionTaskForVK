@@ -23,49 +23,46 @@ class CurrentWeatherViewControllerCell: UITableViewCell {
     private var modelView = WeatherModelView()
     private let disposeBag = DisposeBag()
     
-    /*private*/ let labelNameCity: UILabel = {
+    let labelNameCity: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: ConstantsCurrentWeather.fontSize.fontSize32)
         label.textColor = .white
+        label.frame = CGRect(x: 0, y: 0, width: 250, height: 150)
+        return label
+    }()
+    
+    let labelTemp: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: ConstantsCurrentWeather.fontSize.fontSize32)
+        label.textColor = .white
+        label.textAlignment = .right
         label.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
         return label
     }()
     
-    private let labelTemp: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: ConstantsCurrentWeather.fontSize.fontSize32)
-        label.textColor = .white
-        label.frame = CGRect(x: UIScreen.main.bounds.width - 50, y: 0, width: 150, height: 150)
-        return label
-    }()
-    //
-    //        private let labelDescription: UILabel = {
-    //            let label = UILabel()
-    //            label.font = UIFont.systemFont(ofSize: Constants.fontSize.fontSize24)
-    //            label.textColor = .white
-    //            return label
-    //        }()
-    //
-    //        private let labelTempMinAndMax: UILabel = {
-    //            let label = UILabel()
-    //            label.font = UIFont.systemFont(ofSize: Constants.fontSize.fontSize24)
-    //            label.textColor = .white
-    //            return label
-    //        }()
-    //
-    //        private let tableView: UITableView = {
-    //            let tableView = UITableView()
-    //            tableView.backgroundColor = .systemBlue
-    //            return tableView
-    //        }()
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .brown
+        setupSubviews()
+        setupConstrained()
+        modelView.requestWeatherForLOcation()
+        bind()
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private func setupSubviews() {
         addSubview(labelNameCity)
         addSubview(labelTemp)
         
     }
+    private func setupConstrained() {
+        labelNameCity.center = CGPoint(x: labelNameCity.frame.width / 2 + 16, y: UIScreen.main.bounds.height / 8 / 2)
+        labelTemp.center = CGPoint(x: UIScreen.main.bounds.width - labelTemp.frame.width / 2 - 16, y: UIScreen.main.bounds.height / 8 / 2)
+    }
     
-    var forecastArray: [(temp: Int, date: String, weekDay: String)] = []
+    private var forecastArray: [(temp: Int, date: String, weekDay: String)] = []
     func bind() {
         modelView.relay.subscribe { event in
             DispatchQueue.main.async {
@@ -73,24 +70,7 @@ class CurrentWeatherViewControllerCell: UITableViewCell {
                 self.labelNameCity.text = lableNameCity
                 let lableTemp = Int(round(event.element?.list.first?.main.temp ?? 0))
                 self.labelTemp.text = "\(String(describing: lableTemp))º"
-                //                    let lableDescription = event.element?.list.first?.weather.first?.description.capitalized ?? ""
-                //                    self.labelDescription.text = "\(String(describing: lableDescription))"
-                //                    let lableTempMin = Int(round(event.element?.list.first?.main.tempMin ?? 0))
-                //                    let lableTempMax = Int(round(event.element?.list.first?.main.tempMax ?? 0))
-                //                    self.labelTempMinAndMax.text = "H:\(lableTempMax)º L:\(lableTempMin)º"
             }
         }.disposed(by: disposeBag)
-    }
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = .brown
-        addSubview(labelNameCity)
-        addSubview(labelTemp)
-        modelView.requestWeatherForLOcation()
-        bind()
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

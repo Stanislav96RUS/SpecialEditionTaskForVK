@@ -7,28 +7,63 @@
 
 import UIKit
 
-class FullScreen: UITableViewController  {
-
-    let screen1: UIViewController = {
+final class FullScreen: UITableViewController  {
+    
+    private let screen1: UIViewController = {
         let view = CurrentWeatherViewController()
         return view
     }()
     
-    let screen2: UIViewController = {
-        let view = PasswordRandomizer()
+    private let screen2: UIViewController = {
+        let view = PasswordRandomizerViewController()
         return view
     }()
     
-    let screen3: UIViewController = {
-        let view = Game3ViewController()
+    private let screen3: UIViewController = {
+        let view = Magic8BallViewController()
         return view
     }()
     
-    let screen4: UIViewController = {
-        let view = Game1ViewController()
+    private let screen4: UIViewController = {
+        let view = CurrentWeatherViewController()
+        view.view.backgroundColor = .systemRed
         return view
     }()
-    var toggle: Bool = true
+    private let screen5: UIViewController = {
+        let view = PasswordRandomizerViewController()
+        view.view.backgroundColor = .black
+        view.buttonGeneration.backgroundColor = .cyan
+        return view
+    }()
+    
+    private let screen6: UIViewController = {
+        let view = Magic8BallViewController()
+        view.view.backgroundColor = .yellow
+        return view
+    }()
+    
+    private let screen7: UIViewController = {
+        let view = CurrentWeatherViewController()
+        view.view.backgroundColor = .systemMint
+        view.labelTemp.textColor = .systemRed
+        return view
+    }()
+    private let screen8: UIViewController = {
+        let view = PasswordRandomizerViewController()
+        view.view.backgroundColor = .brown
+        return view
+    }()
+    private let screen9: UIViewController = {
+        let view = Magic8BallViewController()
+        view.view.backgroundColor = .systemPink
+        return view
+    }()
+    private let screen10: UIViewController = {
+        let view = PasswordRandomizerViewController()
+        view.view.backgroundColor = .brown
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
@@ -37,9 +72,9 @@ class FullScreen: UITableViewController  {
     private func setupSubviews() {
         setupUIViewControllers()
     }
-
+    
     private func setupUIViewControllers() {
-        let data = [screen1, screen2, screen3, screen4]
+        let data = [screen1, screen2, screen3, screen4, screen5, screen6, screen7, screen8, screen9, screen10]
         for i in 0..<data.count {
             addChild(data[i])
             data[i].view.frame = CGRect(x: 0, y: UIScreen.main.bounds.height * CGFloat(i), width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
